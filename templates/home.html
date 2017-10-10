@@ -1,9 +1,17 @@
 {% extends "layout.html" %}
 {% set active_page ="home" %}
 
-{% block title %}Home{% endblock %}
+{% block title %}Fahrenheit to Celsius{% endblock %}
     
 {% block content %}
     <!--page content-->
-    <h1>Home Page</h1>
+    <h1>Fahrenheit to Celsius</h1>
+    <form action='/response'>
+      What is your favorite color?<br>
+      <input type="text" name="color">
+      <br><br>
+      <input type="submit">
+    </form>
+     <h1>Response:</h1>
+    <p>{{ response }}</p>
 {% endblock %}
