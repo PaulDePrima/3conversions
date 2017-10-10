@@ -6,7 +6,7 @@ app = Flask(__name__) #__name__ = "__main__" if this is the file that was run.  
 def render_main():
     if "color" in request.args:
         celcius = float((request.args['color'])-32)*5/9 
-        return
+        return render_template('home.html', response = "the temp in celcius is" + celcius)
     else:
          return render_template('home.html')
 
