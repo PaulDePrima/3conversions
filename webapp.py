@@ -5,7 +5,7 @@ app = Flask(__name__) #__name__ = "__main__" if this is the file that was run.  
 @app.route("/")
 def render_main():
     if "color" in request.args:
-        celcius = float((request.args['color'])-32)*5/9 
+        celcius = ((float(request.args['color']))-32)*5/9 
         return render_template('home.html', response = "the temp in celcius is" + celcius)
     else:
          return render_template('home.html')
@@ -19,6 +19,6 @@ def render_page2():
      return render_template('page2.html')
     
 if __name__=="__main__":
-    app.run(debug=False, port=54321
+    app.run(debug=False, port=54321)
             
 
