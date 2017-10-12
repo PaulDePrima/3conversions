@@ -10,7 +10,6 @@ def render_main()
 def render_page1():
     celcius = ((float(request.args['color']))-32)*5/9 
     return render_template('home.html', response = "the temp in celcius is" + celcius)
-    return render_template('page1.html')
 
 @app.route("/p2")
 def render_page2():
