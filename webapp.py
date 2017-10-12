@@ -13,7 +13,7 @@ def render_page1():
 
 @app.route("/response")
 def render_response():
-    far = request.args['color']
+    far = float(request.args['color'])
     res = str((far-32)*5/9)
     #The request object stores information about the request sent to the server.
     #args is a MultiDict (like a dictionary but can have muiltiple values for the same key
